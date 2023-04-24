@@ -428,9 +428,9 @@ function autoTemplate() {
   }
 
   if (autoPrice) {
-    var beforePrice = " $";
+    var beforePrice = "&nbsp;$";
   } else {
-    beforePrice = " Negotiable.";
+    beforePrice = "&nbsp;Negotiable.";
     autoPriceM.checked = false;
     autoPriceMValue = "";
     autoPriceMValue = "";
