@@ -376,9 +376,9 @@ function realEstateTemplate() {
   }
 
   if (rePrice) {
-    var beforePrice = " $";
+    var beforePrice = "&nbsp;$";
   } else {
-    beforePrice = " Negotiable.";
+    beforePrice = "&nbsp;Negotiable.";
     reValueM.checked = false;
     reValueMValue = "";
   }
