@@ -41,6 +41,7 @@ const location2 = [
   "fire station",
   "ghetto",
   "post office",
+  "the city",
   "train station",
 ];
 
