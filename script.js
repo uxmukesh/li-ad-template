@@ -550,7 +550,7 @@ function formatArray(arr) {
 //   //   );
 // }
 function formatCurrency(amount) {
-  return amount.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  return amount.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
 }
 
 // location1.forEach((item) => {
@@ -571,6 +571,23 @@ function formatCurrency(amount) {
 function clearFields(id, templateFunction) {
   var id = document.getElementById(id);
   id.value = "";
+  templateFunction();
+}
+
+function clearAllFields(id, templateFunction) {
+  console.log(id);
+  var numberFields = document.querySelectorAll(
+    "#" + id + " input[type=number]"
+  );
+  for (var i = 0; i < numberFields.length; i++) {
+    numberFields[i].value = "";
+  }
+  var checkboxFields = document.querySelectorAll(
+    "#" + id + " input[type=checkbox]"
+  );
+  for (i = 0; i < checkboxFields.length; i++) {
+    checkboxFields[i].checked = false;
+  }
   templateFunction();
 }
 
