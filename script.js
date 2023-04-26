@@ -153,9 +153,9 @@ initTemplate("#real-estate", realEstateTemplate);
 const tabEl = document.querySelectorAll('a[data-bs-toggle="tab"]');
 for (var i = 0, len = tabEl.length; i < len; i++) {
   tabEl[i].addEventListener("shown.bs.tab", (event) => {
-    console.log(event.target); // newly activated tab
+    // console.log(event.target); // newly activated tab
     var activeElementID = event.target.getAttribute("href");
-    console.log(activeElementID);
+    // console.log(activeElementID);
     //console.log(event.relatedTarget); // previous active tab
 
     if (activeElementID == "#real-estate") {
@@ -571,23 +571,6 @@ function formatCurrency(amount) {
 function clearFields(id, templateFunction) {
   var id = document.getElementById(id);
   id.value = "";
-  templateFunction();
-}
-
-function clearAllFields(id, templateFunction) {
-  console.log(id);
-  var numberFields = document.querySelectorAll(
-    "#" + id + " input[type=number]"
-  );
-  for (var i = 0; i < numberFields.length; i++) {
-    numberFields[i].value = "";
-  }
-  var checkboxFields = document.querySelectorAll(
-    "#" + id + " input[type=checkbox]"
-  );
-  for (i = 0; i < checkboxFields.length; i++) {
-    checkboxFields[i].checked = false;
-  }
   templateFunction();
 }
 
